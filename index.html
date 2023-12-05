@@ -1,14 +1,89 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FrontEnd</title>
+    <title>Servidor HTTP con Node.js</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #0f0;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            margin: 50px;
+        }
+
+        h1 {
+            color: #ff6b6b;
+        }
+
+        p {
+            margin-top: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .console {
+            background-color: #111;
+            padding: 20px;
+            border: 1px solid #0f0;
+            text-align: left;
+            overflow-x: auto;
+        }
+
+        pre {
+            margin: 0;
+        }
+
+        a {
+            color: #0f0;
+        }
+    </style>
 </head>
 
 <body>
-    <p>Mi frontend</p>
+    <div class="container">
+        <h1>Servidor HTTP con Node.js</h1>
+        <div class="console">
+            <pre>
+                __  __             _      
+                |  \/  | __ _  _ _ (_) ___ 
+                | |\/| |/ _` || '_|| |/ _ \
+                |_|  |_|\__,_||_|  |_|\___/
+                                           
+            </pre>
+            <p>¡Bienvenido al servidor HTTP con Node.js!</p>
+            <p>Node.js es una tecnología que permite construir servidores web eficientes y escalables.</p>
+            <p>En este ejemplo, utilizamos el módulo 'http' de Node.js para crear un servidor. Cuando alguien accede al
+                servidor, se envía como respuesta la página 'index.html'.
+            </p>
+            <p>Le invito a probar el 'Error 404': <button onclick="generarError404()">Generar Error 404</button></p>
+            <p>Documentación oficial de <a href="https://nodejs.org/"
+                    target="_blank">Node.js</a>.</p>
+        </div>
+    </div>
+    <script>
+        function generarError404() {
+            // Genera una cadena aleatoria de longitud 10 como parte de la URL
+            const paginaAleatoria = "/pagina-no-encontrada-" + generarCadenaAleatoria(10);
+
+            // Simula el error 404 redirigiendo a la página aleatoria
+            window.location.href = paginaAleatoria;
+        }
+
+        function generarCadenaAleatoria(longitud) {
+            let result = '';
+            const caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            for (let i = 0; i < longitud; i++) {
+                result += caracteres.charAt(Math.floor(Math.random() * caracteres.length));
+            }
+            return result;
+        }
+    </script>
 </body>
 
 </html>

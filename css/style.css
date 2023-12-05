@@ -1,0 +1,36 @@
+body {
+    background-color: #0e0e0e;
+    color: #fff;
+    font-family: 'Courier New', monospace;
+    text-align: center;
+    padding: 100px;
+    margin: 0;
+}
+
+h1 {
+    font-size: 8em;
+    margin-bottom: 30px;
+    letter-spacing: 10px;
+    color: #ff6b6b;
+}
+
+p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+    border-bottom: 1px dashed #3498db;
+}
+
+a:hover {
+    color: #2980b9;
+    border-bottom: 1px dashed #2980b9;
+}
+
+.mr-robot {
+    width: 100px;
+    margin-top: 20px;
+}
